@@ -18,6 +18,8 @@ repositories {
     mavenCentral()
 }
 
+ext['hibernate.version'] = '5.2.11.Final'
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -28,6 +30,7 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
 }
 
 test {
